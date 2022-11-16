@@ -1,0 +1,18 @@
+DESAFIO BASE DE DATOS
+----------------------
+1) SELECT `apellido` FROM desafio_db.empleados; 
+2) SELECT DISTINCT `apellido` FROM desafio_db.empleados; 
+3) SELECT * FROM desafio_db.empleados WHERE apellido='Lopez'; 
+4) SELECT * FROM desafio_db.empleados WHERE apellido IN ('Perez', 'Lopez'); 
+5) SELECT * FROM desafio_db.empleados WHERE nroDepto_id = '14'; 
+6) SELECT * FROM desafio_db.empleados WHERE nroDepto_id IN ('37','77'); 
+7) SELECT * FROM desafio_db.empleados WHERE apellido LIKE 'P%'; 
+8) SELECT SUM(presupuesto) FROM departamentos; 
+9) SELECT * FROM empleados, departamentos WHERE empleados.nroDepto_id = departamentos.numero;  
+10) SELECT empleados.nombre, empleados.apellido, departamentos.nombre, departamentos.presupuesto FROM empleados, departamentos WHERE empleados.nroDepto_id = departamentos.numero; 
+11) SELECT empleados.nombre, apellido FROM empleados, departamentos WHERE empleados.nroDepto_id = departamentos.numero AND departamentos.presupuesto > 60000;
+12) INSERT INTO desafio_db.empleados, departamentos VALUES ('89267109','Esther','Vazquez','11'), ('11','Calidad','40000') WHERE empleados.nroDepto_id = departamentos.numero;
+13) UPDATE desafio_db.departamentos SET presupuesto = presupuesto * 0.9; 
+14) UPDATE desafio_db.empleados SET nroDepto_id = 14 WHERE nroDepto_id = 77;
+15) DELETE FROM desafio_db.empleados WHERE nroDepto_id = 14;  
+16) DELETE desafio_db.empleados FROM empleados, departamentos WHERE empleados.nroDepto_id = departamentos.numero AND departamentos.presupuesto > 90000;
